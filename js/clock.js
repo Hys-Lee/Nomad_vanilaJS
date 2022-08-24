@@ -19,8 +19,7 @@ clock을 만들기 전에 반드시 알아야 할 개념들
 const clock = document.querySelector("#clock");
 const lock = document.querySelector("#lock");
 
-function handleClockUnlocked(){
-    
+function unlockClock(){
     clock.style.top="5%";
     clock.style.fontSize="300%";
     clock.classList.remove("hidden");
@@ -30,27 +29,31 @@ function handleClockUnlocked(){
 
     const input = document.querySelector("#todo-form input");
     if(toDos.length>=6){
-        console.log("왜안되냐구");
         input.placeholder="";
     }
     
+    displayUnlock();
 
 }
+
+
 function displayClock(){
     const date = new Date();
     const hours=String(date.getHours()).padStart(2,"0");
     const minutes=String(date.getMinutes()).padStart(2,"0");
     
     clock.innerText =  `${hours}:${minutes} `
+    
+    const lockBtn = document.querySelector("#lock");
+    let stepOne = lockBtn.style.display=="none";
+    let stepTwo = localStorage.getItem(KEY_USERNAME)!==null;
 
-    const isUnlocked = lock.style.display === "none";
-    if(isUnlocked) {
-        clock.classList.add("hidden");
-        handleClockUnlocked();
+    console.log(`${stepOne}, ${stepTwo}`);
+    if(stepOne && stepTwo){
+        unlockClock();
     }
-    console.log(isUnlocked);
+    
 }
 
 displayClock();
-
 setInterval(displayClock,1000);

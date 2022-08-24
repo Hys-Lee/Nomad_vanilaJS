@@ -223,7 +223,7 @@ position: absolute;
     border: none;
     border-bottom: 1px solid white;
    
-    font-size: 10px;
+    font-size: 15px;
     color: white;
     justify-content: center;
     text-align: center;
@@ -240,7 +240,7 @@ position: absolute;
     text-shadow: 0 0 1px black;
     text-align: center;
     margin-bottom:-5%;
-    font-size: small;
+    font-size: 20px;
     display:flex;
     flex-direction: column;
 }
@@ -264,6 +264,7 @@ position: absolute;
     list-style: none;
     display:flex;
     justify-content: space-between;
+    font-size: 25px;
 }
 #todo-list span{
     margin-left: 5%;

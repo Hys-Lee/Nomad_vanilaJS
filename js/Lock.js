@@ -1,6 +1,12 @@
 const lockBtn = document.querySelector("#lock");
 const GRID_CLASSNAME = "grid";
 function displayUnlock(){
+
+
+
+
+
+
     greeting.classList.add(HIDDEN_CLASSNAME);
     const content = document.querySelector("#content");
     console.dir(content);
@@ -12,6 +18,11 @@ function displayUnlock(){
 
     todoForm.classList.remove(HIDDEN_CLASSNAME);
     todoForm.style.display="flex";
+
+
+
+
+
     
 }
 
