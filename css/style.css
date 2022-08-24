@@ -1,0 +1,274 @@
+/*
+부트스트랩도 보니까 레이아웃만 html의 class와 연동하고 나머지는 각각 하는 느낌인 듯.
+*/
+
+.hidden{
+    display:none;
+}
+
+.gird{
+    display:grid;
+}
+body{
+    margin:0;
+    width:100vw;
+    height: 100vh;
+    font-family: 'Nanum Pen Script', cursive;
+}
+
+
+#figure{
+    margin:0;
+    width:100%;
+    height:100vh;
+    position:absolute;
+    overflow: hidden;
+}
+#background{
+    
+    
+    width: 100%;
+    background-position: center;
+    position: absolute;
+    display: flex;
+    z-index: -5;
+    
+    left:0;
+    right:0;
+    top:0;
+    bottom: 0;
+    
+}
+
+.container{
+    margin:0;
+    width:100vw;
+    height:100vh;
+    
+}
+.main{
+    margin:0;
+    height: 100vh; 
+    
+    display: grid;
+    
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.plate{
+    margin:0;
+    height:100vh;
+    
+    grid-area: 1 / 2 / 2 / 2;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    /*background-image: url("../img/ipad3.png");*/
+    /*z-index: 1;
+    margin-left:-3%;
+    margin-right:-5%;
+    margin-top: -7%;
+    
+    background-position: center top;
+    background-size: 100%;
+    background-repeat: no-repeat;*/
+}
+#ipad{
+    z-index: 0;
+    position: absolute;
+    width:33%;
+    
+    margin:0;
+    top:-5%;
+    
+    left:50%;
+    transform: translateX(-50%);
+    
+}
+
+.locked{
+    
+    /*margin-top:39%;
+    margin-bottom:39%;
+    margin-left: 14%;
+    margin-right: 15%;*/
+    
+    z-index: 1;
+    
+    
+    
+}
+#blur{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-54%);
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    
+    width:28%;
+    height:82%;
+    
+}
+.locked #clock{
+    position: absolute;
+    top:20%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+
+    
+    color:rgb(0,0,0);
+    font-size: 500%;
+    text-shadow: 0 0 2px #FFFFFF;
+}
+#lock{
+    width:10%;
+    
+    margin-top:60%;
+    /*display: block;*/
+    margin-left:auto;
+    margin-right: auto;
+    z-index: 0;
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+#login-form{
+    z-index:1;
+    top:60%;
+    left:50%;
+    transform: translate(-50%);
+    
+    width:50%;
+    position:absolute;/**/
+    
+    
+
+    display: flex;
+    justify-content: center;
+    margin-left: -0.5%;
+    
+ 
+}
+#login-form input{
+    
+    z-index: 1;
+    margin-left: 5%;
+    margin-right: 5%;    
+    /*위에는 hidden벗겨진 상황*/
+
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    width: 40%;
+    height: 30px;
+    
+    color: white;
+    
+    text-align: center;
+    outline: transparent;
+
+}
+#greeting{
+    position:absolute;
+    margin-top:5%;
+    text-shadow: 0 0 1px #FFFFFF;
+}
+#content{
+    z-index: 3;
+    margin-left: -2%;
+    width:70%;
+    height:65%;
+    margin-top: 1%;
+
+    grid-template-rows: 2fr 15fr;
+    
+}
+#weather{
+    color:white;
+    display:grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    position:absolute;
+    top:7%;
+    font-size: 10%;
+    width:20%;
+}
+#weather span:first-child{
+    
+
+}
+#weather span:last-child{
+    text-align: center;
+}
+#todo-form{
+    z-index: 5;
+    width:80%;
+    position:absolute;
+
+    justify-content: center;
+    top:83%;
+}
+#todo-form input{
+    
+position: absolute;
+    
+    width:20%;
+    margin-left: 1%;
+    margin-right: 1%;
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+   
+    font-size: 10px;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    outline: transparent;
+
+    
+}
+
+
+
+
+#quotes{
+    color:white;
+    text-shadow: 0 0 1px black;
+    text-align: center;
+    margin-bottom:-5%;
+    font-size: small;
+    display:flex;
+    flex-direction: column;
+}
+
+#todo-list{
+    padding:0;
+    height:10%;
+    margin:0;
+    
+    
+}
+#todo-list li:first-child{
+    
+}
+#todo-list li{
+    margin:1%;
+    background-color: antiquewhite;
+    opacity: 0.5;
+    border-radius: 5px;
+    border:#FFFFFF 1px solid ;
+    list-style: none;
+    display:flex;
+    justify-content: space-between;
+}
+#todo-list span{
+    margin-left: 5%;
+}
+#todo-list button{
+    background:none;
+    border:none;
+}
